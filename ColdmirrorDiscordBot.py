@@ -19,7 +19,7 @@ TOKEN = os.getenv("DISCORD_TOKEN") # Reads and stores the Discord Token from the
 keep_alive()
 
 # Define the allowed channel ID (replace with your actual bot-test channel ID)
-ALLOWED_CHANNEL_IDS = [1353078571085594745, 1353120270138867753]
+ALLOWED_CHANNEL_IDS = [1353078571085594745, 1353120270138867753, 1368682440499007560]
 
 # Setup of intents. Intents are permissions the bot has on the server
 intents = discord.Intents.default() # Intents can be set through this object
@@ -44,7 +44,7 @@ def load_quotes():
 async def on_message(msg):
     if msg.author == bot.user or msg.channel.id not in ALLOWED_CHANNEL_IDS:
         return
-    if msg.channel.id == 1353078571085594745:
+    if msg.channel.id == 1368682440499007560:
         await msg.channel.send('Interesting message!')
     await bot.process_commands(msg)
 
